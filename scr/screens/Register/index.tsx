@@ -50,7 +50,7 @@ export function Register({ navigation }: LoginTypes) {
                 <View style={styles.formRow}>
                     <Ionicons name="person" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.gray}
                         style={styles.input}
                         placeholder="Nome"
                         onChangeText={(i) => handleChange({ name: i })}
@@ -59,7 +59,7 @@ export function Register({ navigation }: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.gray}
                         style={styles.input}
                         placeholder="Email"
                         keyboardType="email-address"
@@ -70,7 +70,7 @@ export function Register({ navigation }: LoginTypes) {
                 <View style={styles.formRow}>
                     <Entypo name="key" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.gray}
                         style={styles.input}
                         placeholder="Senha"
                         secureTextEntry={true}

@@ -29,7 +29,7 @@ export function Mensagem({navigation}: MessageTypes){
         return(
             <View style={styles.item}>
                 <Text style={styles.itemText}> Nome: {item.title}</Text>
-                <Text style={styles.itemText}> Assunto: {item.title}</Text>
+                <Text style={styles.itemText}> Título: {item.title}</Text>
                 <Text style={styles.itemText}> Mensagem: {item.message}</Text>
             </View>
         )
@@ -46,7 +46,7 @@ export function Mensagem({navigation}: MessageTypes){
                 )
             }
             <TouchableOpacity style={styles.item} onPress={() => navigation.navigate("CadMessage")}>
-            <AntDesign name="pluscircle" size={48} color={colors.secondary} />
+            <AntDesign name="pluscircle" size={48} color={colors.green} />
             </TouchableOpacity>
         </View>
     )}

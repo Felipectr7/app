@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         borderWidth: 0.7,
-        borderColor: colors.primary,
+        borderColor: colors.black,
         borderRadius: 5
 
     },

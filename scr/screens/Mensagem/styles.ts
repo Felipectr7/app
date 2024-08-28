@@ -8,15 +8,15 @@ export const styles = StyleSheet.create({
         justifyContent: "center"
     },
     item: {
-        backgroundColor: colors.third,
+        backgroundColor: colors.ligthgreen,
         width: "100%",
         marginTop: 10,
         borderRadius: 10
     },
     itemText: {
         fontSize: 20,
-        color: colors.white,
+        color: colors.black,
         padding: 10,
-        backgroundColor: colors.secondary
+        backgroundColor: colors.ligthgreen
     }
 })

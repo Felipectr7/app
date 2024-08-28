@@ -42,11 +42,11 @@ export function Login({ navigation }: LoginTypes){
     return(
         <View style={styles.container}>
          <KeyboardAvoidingView>
-            <Text style={styles.title}>Entre no nosso app!</Text>
+            <Text style={styles.title}>Cadastre-se!</Text>
             <View style={styles.formRow}>
                 <MaterialIcons name="email" style={styles.icon} />
                 <TextInput
-                placeholderTextColor={colors.black}
+                placeholderTextColor={colors.gray}
                 style={styles.input}
                 placeholder="Email"
                 keyboardType="email-address"
@@ -57,7 +57,7 @@ export function Login({ navigation }: LoginTypes){
             <View style={styles.formRow}>
                 <Entypo name="key" style={styles.icon}/>
                 <TextInput
-                placeholderTextColor={colors.black}
+                placeholderTextColor={colors.gray}
                 style={styles.input}
                 placeholder="Senha"
                 secureTextEntry={true}

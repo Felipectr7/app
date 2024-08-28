@@ -39,7 +39,7 @@ export function CadMessage({navigation}: MessageTypes){
                 <Text style={styles.title}>Cadastrar Mensagem</Text>
                 <View style={styles.formRow}>
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.gray}
                         style={styles.input}
                         placeholder="Título"
                         onChangeText={(i)=> handleChange({
@@ -50,7 +50,7 @@ export function CadMessage({navigation}: MessageTypes){
                 </View>
                 <View style={styles.formRow}>
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.gray}
                         style={styles.input}
                         placeholder="Mensagem"
                         multiline={true}
