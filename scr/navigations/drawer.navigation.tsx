@@ -3,12 +3,14 @@ import { colors } from '../styles/colors';
 import { Ionicons } from '@expo/vector-icons';
 import { ScreenCamera } from '../screens';
 import { TabNavigation } from "./tab.navigation";
-
+import {Imagens} from "../screens/Imagens"
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import React from 'react';
 
 type DrawerParamList = {
     Tab: undefined
     Camera: undefined
+    Imagem: undefined
 }
 type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, 'Tab'>
 export type DrawerTypes = {
@@ -37,6 +39,12 @@ export function DrawerNavigation() {
                     <Ionicons name="person" size={24} color={colors.white} />
                 ),
             }} />
-        </Drawer.Navigator>
+            <Drawer.Screen name='Imagem' component={Imagens}
+            options={{
+                drawerIcon: ()=>(
+                    <FontAwesome6 name="fish-fins" size={24} color="black" />
+                ),
+            }}/>
+            </Drawer.Navigator>
     )
 }
