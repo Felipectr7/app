@@ -3,13 +3,17 @@ import {ScrollView, View, Image} from 'react-native';
 import * as MediaLibrary from 'expo-media-library';
 import * as ImagePicker from "expo-image-picker";
 import {styles} from './styles'
-import {ComponentAlbum, ComponentButtonInterface} from '../../components';
+import {ComponentAlbum, ComponentButtonInterface} from "../../components";
 export function Imagens(){
     const [albums, setAlbums] = useState<MediaLibrary.Album[] | null>(null);
     const [permissionResponse, requestPermission] = MediaLibrary.usePermissions();
     const [image, setImage] = useState<string | null>(null);
+
     async function getAlbums(){
-        if (permissionResponse && permissionResponse.status !== 'granted'){
+        if (permissionResponse &&
+             permissionResponse.status !== 'granted' &&
+             permissionResponse.accessPrivileges !== 'all'
+        ) {
             await requestPermission();
         }
         const fetchedAlbums = await MediaLibrary.getAlbumsAsync({

@@ -6,9 +6,9 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
         marginBottom: 12,
         gap: 4,
-    },
-    albumAssetsContainer: {
+      },
+      albumAssetsContainer: {
         flexDirection: 'row',
-        flexWrap: 'wrap'
-    },
-});
+        flexWrap: 'wrap',
+      },
+  });

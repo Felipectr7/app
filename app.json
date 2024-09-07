@@ -32,6 +32,7 @@
           "recordAudioAndroid": true
         }
       ],
+      
       [
         "expo-media-library",
         {
@@ -40,12 +41,12 @@
           "isAccessMediaLocationEnabled": true
         }
       ],
+
       [
-      "expo-image-picker",
-      {
-        "photosPermission":"O aplicativo acessa suas fotos para que você possa compartilhá-las com seus amigos."
-      }
-    ]
+        "expo-image-picker",{
+          "photosPermission": "O aplicativo acessa suas fotod para que você possa compartilha-la com seus amigos :)"
+        }
+      ]
     ]
   }
 }

@@ -1,16 +1,16 @@
 import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/drawer';
 import { colors } from '../styles/colors';
-import { Ionicons } from '@expo/vector-icons';
-import { ScreenCamera } from '../screens';
+import { Ionicons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
+import { ScreenCamera, ScreenImagens, ScreenQrCode } from '../screens';
 import { TabNavigation } from "./tab.navigation";
-import {Imagens} from "../screens/Imagens"
-import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+
 import React from 'react';
 
 type DrawerParamList = {
     Tab: undefined
     Camera: undefined
     Imagem: undefined
+    QrCode: undefined
 }
 type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, 'Tab'>
 export type DrawerTypes = {
@@ -32,19 +32,30 @@ export function DrawerNavigation() {
                 drawerIcon: ()=> (
                     <Ionicons name="person" size={24} color={colors.white} />
                 ),
-            }} />
+            }} 
+            />
             <Drawer.Screen name='Camera' component={ScreenCamera} 
             options={{
                 drawerIcon: ()=> (
-                    <Ionicons name="person" size={24} color={colors.white} />
+                    <FontAwesome name="picture-o" size={24} color={colors.white} />
                 ),
-            }} />
-            <Drawer.Screen name='Imagem' component={Imagens}
+            }} 
+            />
+            <Drawer.Screen name='Imagem' component={ScreenImagens} 
             options={{
-                drawerIcon: ()=>(
-                    <FontAwesome6 name="fish-fins" size={24} color="black" />
+                drawerIcon: ()=> (
+                    <FontAwesome name="picture-o" size={24} color={colors.white} />
                 ),
-            }}/>
-            </Drawer.Navigator>
+            }} 
+            />
+            <Drawer.Screen name='QrCode' component={ScreenQrCode} 
+            options={{
+                drawerIcon: ()=> (
+                    <MaterialCommunityIcons name="qrcode-scan" size={24} color={colors.white} />
+                ),
+            }} 
+            />
+        </Drawer.Navigator>
     )
 }
+/*Precisa fazer a opção de album aparecer, mudar o icon da camera e ver se tá funcionando */

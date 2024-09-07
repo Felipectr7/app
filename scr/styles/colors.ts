@@ -2,9 +2,9 @@
 export const colors = {
     black: "#000",
     white: "#fff",
-    green:"#32CD32",
+    green:"#3232CD",
     gray:"#9B9797",
-    ligthgreen: "#32CD32",
-    offwhite: "#32CD32",
-    ligthgreenn: "#32CD32" 
+    ligthgreen: "#3232CD",
+    offwhite: "#D9D9D9",
+    ligthgreenn: "#3232CD" 
 }

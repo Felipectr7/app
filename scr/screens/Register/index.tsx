@@ -15,6 +15,14 @@ export interface IRegister {
     password?: string
 }
 
+export interface IError {
+    errors: {
+    rule: string
+    field: string
+    message: string
+    }[]
+}
+
 export function Register({ navigation }: LoginTypes) {
     const [data, setData] = useState<IRegister>();
     const { setLoading } = useAuth ()
@@ -27,8 +35,8 @@ export function Register({ navigation }: LoginTypes) {
                 navigation.navigate("Login")
             } catch (error) {
                 const err = error as AxiosError
-                const msg = err.response?.data as string
-                Alert.alert(msg)
+                const msg = (err.response?.data as IError)
+                Alert.alert(msg.errors.reduce((total, atual) => total + atual.message, ''))
             }
            setLoading(false)
         } else {
